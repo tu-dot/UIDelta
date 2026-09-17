@@ -1,4 +1,5 @@
 (() => {
+  document.documentElement.classList.add('js');
   const $ = selector => document.querySelector(selector);
   let toastTimer;
   function notify(message) {
@@ -34,6 +35,19 @@
       event.preventDefault();setScreen(keys[index],true);
     });
   });
+  const journey = $('#workflow');
+  if (journey) {
+    if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      const observer = new IntersectionObserver(entries => {
+        if (!entries[0].isIntersecting) return;
+        journey.classList.add('is-visible');
+        observer.disconnect();
+      }, { threshold: .12 });
+      observer.observe(journey);
+    } else {
+      journey.classList.add('is-visible');
+    }
+  }
   document.addEventListener('keydown', event => { if(event.key==='Escape') document.querySelectorAll('.preview-trigger:hover, .preview-trigger:focus').forEach(el => el.classList.add('dismissed')); });
   document.querySelectorAll('.preview-trigger').forEach(el => { for(const event of ['pointerleave','blur']) el.addEventListener(event, () => el.classList.remove('dismissed')); });
   $('#download-demo').addEventListener('click',()=>{
