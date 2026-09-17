@@ -54,4 +54,5 @@
 @media(max-width:800px){.user-journey{padding-bottom:56px}.handoff-section{padding:48px 0 76px}}
 @media(max-width:540px){.user-journey{padding-bottom:48px}.handoff-section{padding:44px 0 76px}}
 .journey-stop-head{min-height:34px;padding:8px 9px;border-top:1px solid #d9dfd4;border-bottom:1px solid #d9dfd4;font-weight:650}.journey-stop>small{display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #dfe4da;color:#65705e}.journey-stop>small b{padding:3px 6px;border-radius:4px;background:#fbe8df;color:#ad4f32;font-size:9px;font-weight:650;letter-spacing:.08em}.install-copy{align-self:start;padding-top:6px}
+.journey-map-heading h2 em{color:var(--accent);font-style:normal}
 @media(max-width:540px){.journey-stop-head{font-size:12px;padding:9px 10px}.journey-stop>small{font-size:11px}.install-copy{padding-top:0}}
