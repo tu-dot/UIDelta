@@ -20,18 +20,14 @@
 <body><a class="skip-link" href="#main">跳到主要内容</a>
 <header class="site-header wrap"><a class="brand" href="./" aria-label="UIDelta 首页"><img src="assets/icon.svg" width="32" height="32" alt=""><span>UIDelta<span class="brand-dot">.</span></span></a><nav aria-label="主导航"><a href="#product">产品</a><a href="#workflow">用户旅程</a><a href="#install">开始使用</a></nav><a class="github-link" href="https://github.com/tu-dot/UIDelta" target="_blank" rel="noopener">GitHub ↗</a></header>
 <main id="main">
-<section class="hero hero-direct wrap" id="product">
-  <div class="hero-direct-copy">
-    <span class="hero-kicker"><i></i>开源网页走查工具 · v0.9.4</span>
-    <h1>在真实网页上走查。<br><em>把问题交给 Agent 改。</em></h1>
-    <p class="hero-description">测量、试改、标注、取证。导出带元素位置的交付包，前端与 Codex 可以直接定位修改。</p>
-    <div class="hero-actions"><a class="button primary" href="#install">免费下载 UIDelta <span>↓</span></a><a class="text-link" href="#workflow">看一次完整旅程 <span>↘</span></a></div>
-    <p class="hero-notes">无需账号 · 数据留在本地 · MIT 开源</p>
+<section class="hero-cover" id="product">
+  <div class="wrap hero-cover-copy">
+    <div><span class="hero-kicker"><i></i>开源网页走查工具 · v0.9.4</span><h1>把网页问题，<br><em>直接交给 Agent 改。</em></h1></div>
+    <aside><p>在真实网页上测量、试改、标注和取证。导出带元素位置的交付包，让前端与 Codex 从定位开始。</p><div class="hero-actions"><a class="button primary" href="#install">免费下载 UIDelta <span>↓</span></a><a class="text-link" href="#workflow">看完整旅程 <span>↘</span></a></div><small>无需账号 · 数据留在本地 · MIT 开源</small></aside>
   </div>
-  <div class="hero-product-shot">
-    <div class="shot-browser-bar"><span></span><span></span><span></span><b>project.example / workspace</b></div>
-    <picture><source media="(max-width:540px)" srcset="brand/screenshots/panel-record.png"><img src="brand/screenshots/workspace-record.png" width="2560" height="1520" alt="UIDelta 在真实网页上记录问题、截图和元素位置"></picture>
-    <div class="shot-caption"><span><i></i>正在真实网页上走查</span><strong>问题与元素位置一起保存</strong></div>
+  <div class="wrap hero-stage">
+    <ol class="hero-stage-rail" aria-label="UIDelta 的三个核心步骤"><li><span>01</span><strong>在页面上量</strong><small>尺寸 · 间距 · 样式</small></li><li><span>02</span><strong>把正确效果试出来</strong><small>实时试改 · 截图取证</small></li><li><span>03</span><strong>带着定位交给 Agent</strong><small>目标 · 证据 · 元素位置</small></li></ol>
+    <div class="hero-stage-screen"><div class="shot-browser-bar"><span></span><span></span><span></span><b>project.example / workspace</b></div><picture><source media="(max-width:540px)" srcset="brand/screenshots/panel-record.png"><img src="brand/screenshots/workspace-record.png" width="2560" height="1520" alt="UIDelta 在真实网页上记录问题、截图和元素位置"></picture><div class="shot-caption"><span><i></i>正在真实网页上走查</span><strong>问题与元素位置一起保存</strong></div></div>
   </div>
 </section>
 
@@ -90,10 +86,11 @@
 </section>
 <section class="handoff-section section" id="handoff">
   <div class="wrap">
-    <div class="section-heading focused-heading"><div><span class="eyebrow">前端真正省下来的，是寻找上下文的时间。</span><h2>收到交付包，<br>直接从定位开始。</h2></div><p>页面地址、元素线索、当前截图与目标值已经备好。<br>把 ZIP 和项目源码一起交给 Codex。</p></div>
-    <div class="agent-handoff" id="agent-handoff">
-      <div class="agent-copy"><span class="eyebrow">ZIP → 前端 / Agent</span><h3>让 Codex，<br>接着改。</h3><p>Codex 先读取问题与截图，再根据元素地址查找真实组件。完成修改和检查后，把结果交回前端验收。</p><ul class="developer-benefits"><li><strong>少找一遍。</strong>页面与元素已有线索。</li><li><strong>少猜一轮。</strong>实际与目标一起交付。</li><li><strong>少拼一次上下文。</strong>直接读取已有文件。</li></ul><button type="button" class="button primary" id="copy-agent-prompt">复制给 Agent 的提示词 <span>↗</span></button><p class="agent-context">交付包不包含项目源码。请同时提供源码、运行环境与修改授权。</p></div>
-      <div class="bundle-preview"><div class="bundle-heading"><strong>UIDelta-review.zip</strong><span>前端交付包</span></div><div class="bundle-files"><div><code>report.html</code><p>问题、截图与修改目标</p></div><div><code>issues.json</code><p>页面地址与元素定位</p></div><div><code>screenshots/</code><p>当前状态与参考图片</p></div></div><p class="agent-flow">读取问题 → 定位组件 → 修改检查 → 前端验收</p></div>
+    <header class="handoff-inline-heading"><div><span class="eyebrow">前端收到交付包之后</span><h2>不再重找问题。<br><em>从定位直接开工。</em></h2></div><p>把 UIDelta 的定位证据与项目源码放进同一个工作区。<br>Codex 负责查找和修改，前端负责判断与验收。</p></header>
+    <div class="handoff-board" id="agent-handoff">
+      <div class="handoff-inputs"><article><span>01 · 走查依据</span><strong>UIDelta-review.zip</strong><p>报告、元素位置、当前截图、目标值</p></article><b aria-hidden="true">＋</b><article><span>02 · 真实实现</span><strong>项目源码</strong><p>可运行的代码、环境与修改授权</p></article></div>
+      <ol class="handoff-steps"><li><span>01</span><small>先确认范围</small><strong>打开报告，过一遍问题。</strong><p>查看 report.html、截图和目标值，确认要处理的页面。</p></li><li><span>02</span><small>交给 Agent 定位</small><strong>让 Codex 对照源码处理。</strong><p>读取 issues.json，根据页面与元素线索查找真实组件。</p></li><li><span>03</span><small>前端审阅</small><strong>看代码，也看页面。</strong><p>审阅修改文件与差异，运行必要检查，再打开页面复核。</p></li><li><span>04</span><small>按目标验收</small><strong>逐条对照，确认交付。</strong><p>用目标值和参考截图复核；通过后关闭对应问题。</p></li></ol>
+      <footer class="handoff-board-footer"><p><span></span>ZIP 提供上下文，不包含项目源码或自动修复程序。</p><button type="button" class="button primary" id="copy-agent-prompt">复制给 Agent 的提示词 <span>↗</span></button></footer>
     </div>
     <pre id="agent-prompt-text" hidden>请读取我附上的 UIDelta 走查 ZIP，结合当前项目源码处理这些问题。
 
